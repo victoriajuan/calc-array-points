@@ -57,3 +57,52 @@ func average(array: [Int]) -> Int {
 func reduce(array: [Int], operation: ([Int]) -> Int) -> Int {
     return operation(array)
 }
+
+//points
+
+//tuples
+func add(p1: (Int, Int), p2: (Int, Int)) -> (Int, Int) {
+    return ((p1.0 + p2.0), (p1.1 + p2.1))
+}
+
+func subtract(p1: (Int, Int), p2: (Int, Int)) -> (Int, Int) {
+    return ((p1.0 - p2.0), (p1.1 - p2.1))
+}
+
+//dictionary: Int
+func add(p1: [String : Int]?, p2: [String : Int]?) -> [String: Int] {
+    var dictionary: [String:Int] = [:]
+    if (p1?["x"] != nil && p1?["y"] != nil && p2?["x"] != nil && p2?["y"] != nil) {
+        dictionary["x"] = (p1?["x"]!)! + (p2?["x"]!)!
+        dictionary["y"] = (p1?["y"]!)! + (p2?["y"]!)!
+    }
+    return dictionary
+}
+
+func subtract(p1: [String : Int]?, p2: [String : Int]?) -> [String: Int] {
+    var dictionary: [String:Int] = [:]
+    if (p1?["x"] != nil && p1?["y"] != nil && p2?["x"] != nil && p2?["y"] != nil) {
+        dictionary["x"] = (p1?["x"]!)! - (p2?["x"]!)!
+        dictionary["y"] = (p1?["y"]!)! - (p2?["y"]!)!
+    }
+    return dictionary
+}
+
+//dictionary: Double
+func add(p1: [String : Double]?, p2: [String : Double]?) -> [String: Double] {
+    var dictionary: [String:Double] = [:]
+    if (p1?["x"] != nil && p1?["y"] != nil && p2?["x"] != nil && p2?["y"] != nil) {
+        dictionary["x"] = (p1?["x"]!)! + (p2?["x"]!)!
+        dictionary["y"] = (p1?["y"]!)! + (p2?["y"]!)!
+    }
+    return dictionary
+}
+
+func subtract(p1: [String : Double]?, p2: [String : Double]?) -> [String: Double] {
+    var dictionary: [String:Double] = [:]
+    if (p1?["x"] != nil && p1?["y"] != nil && p2?["x"] != nil && p2?["y"] != nil) {
+        dictionary["x"] = (p1?["x"]!)! - (p2?["x"]!)!
+        dictionary["y"] = (p1?["y"]!)! - (p2?["y"]!)!
+    }
+    return dictionary
+}
